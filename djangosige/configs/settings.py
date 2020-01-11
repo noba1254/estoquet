@@ -59,6 +59,7 @@ MIDDLEWARE = [
 
     # Middleware para paginas que exigem login
     'djangosige.middleware.LoginRequiredMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'djangosige.urls'
@@ -129,6 +130,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(APP_ROOT, 'static'),
 ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 FIXTURE_DIRS = [
     os.path.join(APP_ROOT, 'fixtures'),
