@@ -7,6 +7,7 @@ from django.utils.deprecation import MiddlewareMixin
 from .configs.settings import LOGIN_NOT_REQUIRED
 
 
+
 class LoginRequiredMiddleware(MiddlewareMixin):
 
     def __init__(self, get_response=None, *args, **kwargs):
